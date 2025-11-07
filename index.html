@@ -3,66 +3,323 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Резюме — Ниджат Агзаманов</title>
+  <meta name="description" content="Резюме системного администратора Ниджата. Актуально на 7 ноября 2025. Опыт: Python, сети, кибербезопасность.">
+  <meta name="keywords" content="резюме, системный администратор, кибербезопасность, Python, SIEM, DevOps, Киев, Украина">
+  <meta name="author" content="Ниджат">
+  <title>Резюме от 7 ноября 2025 — Ниджат, системный администратор</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #1e1e2f, #2d2d44);
-      color: #fff;
-      text-align: center;
+    :root {
+      --main-bg: #f9f9fb;
+      --accent: #2d6cdf;
+      --text: #222;
+      --muted: #666;
+      --border: #e0e0e0;
+      --block-bg: #fff;
+      --radius: 12px;
+      --shadow: 0 2px 8px rgba(44, 76, 120, 0.04);
+      --font-main: 'Segoe UI', 'Arial', sans-serif;
+      --font-mono: 'Fira Mono', 'Consolas', monospace;
+    }
+    html, body {
       margin: 0;
       padding: 0;
+      background: var(--main-bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      font-size: 17px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 820px;
+      margin: 32px auto 32px auto;
+      padding: 24px;
+      background: var(--block-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
     }
     header {
-      background-color: #282845;
-      padding: 20px;
-      font-size: 1.8em;
-      font-weight: bold;
-      letter-spacing: 1px;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
     }
-    section {
-      margin: 40px auto;
-      width: 90%;
-      max-width: 700px;
-      background: rgba(255,255,255,0.05);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    .resume-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
     }
-    h2 {
-      color: #00d1b2;
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 12px;
     }
-    a {
-      color: #00d1b2;
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 32px;
+      margin-bottom: 8px;
+    }
+    .info-label {
+      font-weight: 600;
+      color: var(--muted);
+      min-width: 120px;
+      display: inline-block;
+    }
+    nav {
+      margin: 18px 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    nav a {
+      color: var(--accent);
       text-decoration: none;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 6px;
+      transition: background 0.2s;
     }
-    a:hover {
-      text-decoration: underline;
+    nav a:hover, nav a:focus {
+      background: #eaf1ff;
+      outline: none;
+    }
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+    }
+    .summary {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 0;
+    }
+    .list {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .list li {
+      margin-bottom: 6px;
+    }
+    .skills-list, .lang-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .skill-tag {
+      background: #eaf1ff;
+      color: var(--accent);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.98em;
+      font-family: var(--font-mono);
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+    .lang-list li {
+      margin-bottom: 4px;
+    }
+    .cert-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 0.98em;
+    }
+    .cert-table th, .cert-table td {
+      border: 1px solid var(--border);
+      padding: 7px 10px;
+      text-align: left;
+    }
+    .cert-table th {
+      background: #f3f7ff;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 18px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 1em;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .download-btn:hover, .download-btn:focus {
+      background: #1e4fa3;
+      outline: none;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      .info-row {
+        flex-direction: column;
+        gap: 4px 0;
+      }
+      nav {
+        gap: 8px;
+        font-size: 0.98em;
+      }
+      .section {
+        margin-bottom: 22px;
+      }
+    }
+    /* Accessibility: focus outline for all interactive elements */
+    a:focus, button:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
     }
   </style>
 </head>
 <body>
-  <header>Резюме — Ниджат Агзаманов</header>
+  <main class="container" id="top" tabindex="-1">
+    <header>
+      <div class="resume-title">Резюме от 7 ноября 2025</div>
+      <div class="subtitle">Ниджат — Системный администратор</div>
+      <div class="info-row" aria-label="Основная информация">
+        <div><span class="info-label">Позиции:</span> Системный администратор, помощник администратора систем, IT-специалист, водитель, DevOps engineer</div>
+        <div><span class="info-label">Тип занятости:</span> полная, неполная</div>
+        <div><span class="info-label">Возраст:</span> 33 года</div>
+        <div><span class="info-label">Город:</span> Киев</div>
+        <div><span class="info-label">Готовность:</span> к работе по всей Украине</div>
+      </div>
+      <div class="info-row" aria-label="Контактная информация">
+        <div><span class="info-label">Телефон:</span> <span aria-label="Телефон по запросу">по запросу</span></div>
+        <div><span class="info-label">LinkedIn:</span> <a href="#" aria-label="Профиль LinkedIn по запросу">по запросу</a></div>
+      </div>
+      <nav aria-label="Навигация по разделам">
+        <a href="#summary">О себе</a>
+        <a href="#education">Образование</a>
+        <a href="#certificates">Сертификаты</a>
+        <a href="#skills">Навыки</a>
+        <a href="#languages">Языки</a>
+        <a href="#download">Скачать PDF</a>
+      </nav>
+    </header>
 
-  <section>
-    <h2>Обо мне</h2>
-    <p>Я монтажник, занимаюсь установкой камер, телевизоров и сетей в отелях. Хочу развиваться в системном администрировании и IT.</p>
-  </section>
+    <section class="section" id="summary">
+      <div class="section-title">О себе</div>
+      <p class="summary">
+        Системный администратор с опытом изучения Python, сетевых технологий и кибербезопасности. Активно развиваюсь в области информационной безопасности, обладаю навыками работы с современными инструментами мониторинга и анализа. Открыт к новым вызовам, готов к работе по всей Украине.
+      </p>
+    </section>
 
-  <section>
-    <h2>Навыки</h2>
-    <ul style="list-style:none; padding:0;">
-      <li>🔌 Монтаж и настройка сетей</li>
-      <li>🎥 Установка видеонаблюдения</li>
-      <li>💻 Настройка серверов и Linux</li>
-      <li>🛠 Поддержка техники и ПО</li>
-    </ul>
-  </section>
+    <section class="section" id="education">
+      <div class="section-title">Образование</div>
+      <ul class="list" aria-label="Образование">
+        <li>
+          <strong>ДУИТ им. П.Сагайдачного</strong>, юридический факультет<br>
+          <span>Незаконченное высшее, 2014–2017</span>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Контакты</h2>
-    <p>Email: <a href="mailto:nijat@example.com">nijat@example.com</a></p>
-    <p>GitHub: <a href="#">(добавим позже)</a></p>
-  </section>
+    <section class="section" id="certificates">
+      <div class="section-title">Дополнительное образование и сертификаты</div>
+      <table class="cert-table" aria-label="Сертификаты и курсы">
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Организация</th>
+            <th>Год</th>
+            <th>Длительность</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google Cybersecurity Certificate</td>
+            <td>Google</td>
+            <td>2024</td>
+            <td>3 месяца</td>
+          </tr>
+          <tr>
+            <td>Cisco Introduction to Cybersecurity</td>
+            <td>Cisco</td>
+            <td>2024</td>
+            <td>3 месяца</td>
+          </tr>
+          <tr>
+            <td>Cisco Cyber Threat Management</td>
+            <td>Cisco</td>
+            <td>2024</td>
+            <td>3 месяца</td>
+          </tr>
+          <tr>
+            <td>Cisco Networking Basics</td>
+            <td>Cisco</td>
+            <td>2024</td>
+            <td>3 месяца</td>
+          </tr>
+          <tr>
+            <td>TryHackMe Jr Penetration Tester</td>
+            <td>TryHackMe</td>
+            <td>2024</td>
+            <td>3 месяца</td>
+          </tr>
+          <tr>
+            <td>TryHackMe SOC Level 1</td>
+            <td>TryHackMe</td>
+            <td>2024</td>
+            <td>6 месяцев</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-title">Знания и навыки</div>
+      <ul class="skills-list" aria-label="Технические навыки">
+        <li class="skill-tag">Python</li>
+        <li class="skill-tag">JavaScript</li>
+        <li class="skill-tag">SIEM</li>
+        <li class="skill-tag">Nmap</li>
+        <li class="skill-tag">Wireshark</li>
+        <li class="skill-tag">Splunk</li>
+        <li class="skill-tag">TCP/IP</li>
+        <li class="skill-tag">SQL</li>
+        <li class="skill-tag">Docker</li>
+        <li class="skill-tag">Kali Linux</li>
+        <li class="skill-tag">OSI Model</li>
+        <li class="skill-tag">Google Cloud Platform</li>
+        <li class="skill-tag">Способность к обучению</li>
+      </ul>
+    </section>
+
+    <section class="section" id="languages">
+      <div class="section-title">Знание языков</div>
+      <ul class="lang-list" aria-label="Языки">
+        <li><strong>Английский</strong> — выше среднего (B2)</li>
+        <li><strong>Украинский</strong> — выше среднего (B2)</li>
+        <li><strong>Азербайджанский</strong> — свободно (C2)</li>
+        <li><strong>Турецкий</strong> — свободно (C2)</li>
+      </ul>
+    </section>
+
+    <section class="section" id="download">
+      <div class="section-title">Скачать резюме (PDF)</div>
+      <a href="Nidjat_CV.pdf" download="Nidjat_CV.pdf" class="download-btn" aria-label="Скачать PDF-версию резюме">Скачать PDF</a>
+      <p style="font-size: 0.98em; color: var(--muted); margin-top: 8px;">
+        PDF-версия доступна по запросу или для скачивания по ссылке выше.
+      </p>
+    </section>
+
+    <footer style="margin-top: 32px; color: var(--muted); font-size: 0.95em; text-align: center;">
+      &copy; 2025 Ниджат. Сайт-резюме для поиска работы в IT и кибербезопасности. <a href="#top" style="color: var(--accent); text-decoration: none;">Наверх &uarr;</a>
+    </footer>
+  </main>
 </body>
 </html>
