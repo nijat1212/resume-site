@@ -2,195 +2,470 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Резюме от 7 ноября 2025 — Ниджат, системный администратор</title>
-  <meta name="description" content="Современное резюме системного администратора Ниджата: навыки, сертификаты, опыт, контакты. Адаптивный сайт для GitHub Pages и Cloudflare Pages.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Резюме системного администратора — Иван Иванов</title>
+  <meta name="description" content="Профессиональное резюме системного администратора с опытом в кибербезопасности, виртуализации и поддержке корпоративных сетей.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Резюме системного администратора — Иван Иванов">
+  <meta property="og:description" content="Портфолио, опыт, проекты и сертификаты системного администратора.">
+  <meta property="og:image" content="https://example.com/avatar.jpg">
+  <meta property="og:url" content="https://example.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://example.com/">
   <style>
     :root {
-      --accent: #17639F;
-      --bg: #fff;
-      --text: #222;
-      --secondary: #666;
-      --pill-bg: #f0f4f8;
-      --pill-text: #17639F;
+      --primary: #2563eb;
+      --accent: #10b981;
+      --bg: #f9fafb;
+      --text: #22223b;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --radius: 10px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.04);
+      --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
     }
-    body {
+    html, body {
+      margin: 0; padding: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: 'Inter', 'Roboto', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: var(--font-main);
+      font-size: 18px;
       line-height: 1.6;
     }
-    header {
-      background: var(--accent);
-      color: #fff;
-      padding: 32px 0 24px 0;
-      text-align: center;
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px 24px;
     }
-    header h1 {
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      background: #e0e7ef;
+    }
+    .header-info {
+      flex: 1 1 300px;
+    }
+    .header-info h1 {
       margin: 0 0 8px 0;
       font-size: 2.2rem;
-      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1px;
     }
-    header h2 {
-      margin: 0 0 4px 0;
-      font-size: 1.7rem;
-      font-weight: 600;
-    }
-    .position {
+    .header-info h2 {
+      margin: 0 0 12px 0;
       font-size: 1.2rem;
+      color: var(--accent);
       font-weight: 500;
+    }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 1rem;
+      color: var(--muted);
       margin-bottom: 8px;
     }
-    .roles, .meta {
-      font-size: 1rem;
-      color: #e0e0e0;
-      margin-bottom: 4px;
-    }
-    .download-btn {
-      display: inline-block;
-      margin: 24px auto 0 auto;
-      padding: 12px 32px;
-      background: #fff;
-      color: var(--accent);
-      border-radius: 6px;
-      font-weight: 600;
+    .contacts a {
+      color: var(--primary);
       text-decoration: none;
-      font-size: 1.1rem;
-      transition: background 0.2s, color 0.2s;
-      border: 2px solid #fff;
+      transition: color 0.2s;
     }
-    .download-btn:hover, .download-btn:focus {
-      background: var(--accent);
+    .contacts a:hover {
+      color: var(--accent);
+    }
+    .socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px; height: 32px;
+      background: var(--bg);
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      font-size: 1.2rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .socials a:hover {
+      background: var(--primary);
       color: #fff;
-      border: 2px solid #fff;
     }
     main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 32px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .main-content {
+      flex: 2 1 400px;
+      min-width: 300px;
+    }
+    aside {
+      flex: 1 1 220px;
+      min-width: 220px;
+      background: #f3f4f6;
+      border-radius: var(--radius);
+      padding: 24px 18px;
+      box-sizing: border-box;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      margin-bottom: 24px;
     }
     section {
       margin-bottom: 32px;
     }
-    h3 {
-      color: var(--accent);
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+    section:last-child {
+      margin-bottom: 0;
     }
-    ul, .skills-list {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      border-left: 4px solid var(--accent);
+      padding-left: 8px;
+    }
+    .profile {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+    .skills-list, .lang-list, .cert-list {
+      list-style: none;
       padding: 0;
       margin: 0;
+    }
+    .skills-list li, .lang-list li, .cert-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill-bar {
+      flex: 1;
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-left: 8px;
+      position: relative;
+    }
+    .skill-bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 4px;
+    }
+    .exp-list {
       list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    .skills-list span {
-      display: inline-block;
-      background: var(--pill-bg);
-      color: var(--pill-text);
-      border-radius: 16px;
-      padding: 6px 16px;
-      margin: 4px 4px 0 0;
-      font-size: 15px;
-      font-weight: 500;
+    .exp-list li {
+      margin-bottom: 24px;
     }
-    .contacts ul, .languages ul, .certificates ul {
-      margin-left: 0;
-      padding-left: 0;
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+      font-weight: 600;
     }
-    .contacts li, .languages li, .certificates li {
-      margin-bottom: 6px;
+    .exp-company {
+      color: var(--primary);
+    }
+    .exp-period {
+      color: var(--muted);
+      font-size: 0.98em;
+      margin-left: auto;
+    }
+    .exp-desc {
+      margin: 6px 0 0 0;
       font-size: 1rem;
     }
-    a {
+    .exp-achievements {
+      margin: 6px 0 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.98em;
+    }
+    .projects-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .projects-list li {
+      margin-bottom: 18px;
+    }
+    .project-title {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .project-links a {
       color: var(--accent);
       text-decoration: underline;
-      transition: color 0.2s;
+      font-size: 0.98em;
+      margin-right: 10px;
     }
-    a:hover, a:focus {
-      color: #104a70;
+    .education-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .education-list li {
+      margin-bottom: 14px;
+    }
+    .lang-level {
+      color: var(--muted);
+      font-size: 0.98em;
+      margin-left: 6px;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 20px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .download-btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .contact-form {
+      margin-top: 18px;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    .contact-form button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: var(--primary);
+    }
+    @media (max-width: 900px) {
+      .container { padding: 18px 6px; }
+      main { flex-direction: column; gap: 0; }
+      aside { margin-bottom: 32px; }
     }
     @media (max-width: 600px) {
-      header {
-        padding: 20px 0 16px 0;
-      }
-      main {
-        padding: 18px 6px;
-      }
-      .download-btn {
-        width: 100%;
-        font-size: 1rem;
-        padding: 12px 0;
-      }
+      header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .avatar { width: 90px; height: 90px; }
+      .header-info h1 { font-size: 1.5rem; }
+      .container { padding: 8px 2px; }
+      aside { padding: 14px 6px; }
     }
   </style>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Резюме от 7 ноября 2025</h1>
-    <h2>Ниджат</h2>
-    <div class="position">Системный администратор</div>
-    <div class="roles">Рассматриваемые позиции: системный администратор, помощник администратора систем, IT-специалист, водитель, DevOps engineer</div>
-    <div class="meta">Тип занятости: полная, неполная · Возраст: 33 года · Киев · Готов к работе по всей Украине</div>
-    <a href="resume.pdf" download class="download-btn">⬇️ Скачать резюме (PDF)</a>
-  </header>
-  <main>
-    <section class="contacts">
-      <h3>Контактная информация</h3>
-      <ul>
-        <li>Телефон: +38 (XXX) XXX-XX-XX</li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">linkedin.com/in/username</a></li>
-      </ul>
-    </section>
-    <section class="education">
-      <h3>Образование</h3>
-      <div>
-        <strong>ДУІТ им. П.Сагайдачного</strong><br>
-        Юридический факультет, незаконченная высшая<br>
-        2014–2017
+  <div class="container">
+    <header>
+      <img src="avatar.jpg" alt="Фото системного администратора" class="avatar" loading="lazy">
+      <div class="header-info">
+        <h1>Иван Иванов</h1>
+        <h2>Системный администратор | Кибербезопасность и сети</h2>
+        <div class="contacts">
+          <span>Москва, Россия</span>
+          <span>·</span>
+          <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+          <span>·</span>
+          <a href="mailto:ivan.ivanov@example.com">ivan.ivanov@example.com</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/ivanivanov" target="_blank" aria-label="GitHub"><svg width="20" height="20" fill="currentColor"><use href="#icon-github"/></svg></a>
+          <a href="https://linkedin.com/in/ivanivanov" target="_blank" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor"><use href="#icon-linkedin"/></svg></a>
+          <a href="https://t.me/ivanivanov" target="_blank" aria-label="Telegram"><svg width="20" height="20" fill="currentColor"><use href="#icon-telegram"/></svg></a>
+          <a href="https://ivanivanov.dev" target="_blank" aria-label="Портфолио"><svg width="20" height="20" fill="currentColor"><use href="#icon-globe"/></svg></a>
+        </div>
+        <a href="resume.pdf" class="download-btn" download>Скачать CV (PDF)</a>
       </div>
-    </section>
-    <section class="certificates">
-      <h3>Сертификаты и курсы</h3>
-      <ul>
-        <li><strong>Google Cybersecurity Certificate</strong> — 2024, 3 месяца</li>
-        <li><strong>Cisco Introduction to Cybersecurity</strong> — 2024, 3 месяца</li>
-        <li><strong>Cisco Cyber Threat Management</strong> — 2024, 3 месяца</li>
-        <li><strong>Cisco Networking Basics</strong> — 2024, 3 месяца</li>
-        <li><strong>TryHackMe Jr Penetration Tester</strong> — 2024, 3 месяца</li>
-        <li><strong>TryHackMe SOC Level 1</strong> — 2024, 6 месяцев</li>
-      </ul>
-    </section>
-    <section class="skills">
-      <h3>Знания и навыки</h3>
-      <div class="skills-list">
-        <span>JavaScript</span>
-        <span>Python</span>
-        <span>SIEM</span>
-        <span>Nmap</span>
-        <span>Wireshark</span>
-        <span>Splunk</span>
-        <span>TCP/IP</span>
-        <span>SQL</span>
-        <span>Docker</span>
-        <span>Kali Linux</span>
-        <span>OSI Model</span>
-        <span>Google Cloud Platform</span>
-        <span>Способность к обучению</span>
+      <!-- SVG icons (GitHub, LinkedIn, Telegram, Globe) -->
+      <svg style="display:none;">
+        <symbol id="icon-github" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.7 1.6-.7.2-.7.4-1.1.7-1.3-2.7-.3-5.6-1.3-5.6-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11.1 11.1 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.9 5.5-5.6 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M19 0h-14a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5v-14a5 5 0 0 0-5-5zm-11 19h-3v-9h3zm-1.5-10.3a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zm13.5 10.3h-3v-4.5c0-1.1-.4-1.8-1.3-1.8-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.8v4.5h-3v-9h3v1.2c.4-.6 1-1.5 2.5-1.5 1.8 0 3.1 1.2 3.1 3.7v5.6z"/></symbol>
+        <symbol id="icon-telegram" viewBox="0 0 24 24"><path d="M9.9 17.6l-.4 4.2c.6 0 .9-.3 1.2-.6l2.9-2.7 6-4.4c.8-.6.4-.9-.3-.7l-7.4 2.3-3.2-1c-.7-.2-.7-.7.1-1l12.6-4.9c.7-.3 1.3.2 1.1 1l-2.2 10.3c-.2.8-.7 1-1.4.7l-3.9-1.8-1.9 1.8z"/></symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-14a6 6 0 0 0 0 12 6 6 0 0 0 0-12zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></symbol>
+      </svg>
+    </header>
+    <main>
+      <div class="main-content">
+        <section>
+          <h3>О себе</h3>
+          <div class="profile">
+            Системный администратор с 5+ годами опыта поддержки и оптимизации корпоративной IT-инфраструктуры. Эксперт в администрировании Windows Server и Linux, виртуализации (VMware, Hyper-V), сетевых технологиях и обеспечении информационной безопасности. Внедрял системы мониторинга и резервного копирования, автоматизировал рутинные задачи с помощью PowerShell и Ansible. Ориентирован на повышение отказоустойчивости и безопасности инфраструктуры.
+          </div>
+        </section>
+        <section>
+          <h3>Опыт работы</h3>
+          <ul class="exp-list">
+            <li>
+              <div class="exp-header">
+                <span>Старший системный администратор</span>
+                <span class="exp-company">ООО "ТехноПрогресс"</span>
+                <span class="exp-period">09.2019 — настоящее время</span>
+              </div>
+              <div class="exp-desc">
+                Руководство проектом миграции серверной инфраструктуры в облако (Azure), внедрение системы мониторинга Zabbix, автоматизация резервного копирования (Veeam), разработка регламентов информационной безопасности.
+              </div>
+              <ul class="exp-achievements">
+                <li>Сократил операционные расходы на 30% за счет миграции в облако</li>
+                <li>Снизил время реакции на инциденты на 45%</li>
+                <li>Автоматизировал рутинные задачи, освободив 15 часов в неделю</li>
+              </ul>
+            </li>
+            <li>
+              <div class="exp-header">
+                <span>Системный администратор</span>
+                <span class="exp-company">ЗАО "ИнфоСистемы"</span>
+                <span class="exp-period">07.2017 — 08.2019</span>
+              </div>
+              <div class="exp-desc">
+                Поддержка IT-инфраструктуры (150+ пользователей), настройка виртуализации VMware, миграция серверов, внедрение централизованного управления обновлениями.
+              </div>
+              <ul class="exp-achievements">
+                <li>Оптимизировал производительность бизнес-приложений на 25%</li>
+                <li>Сократил уязвимости на 70% за счет внедрения WSUS</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Проекты</h3>
+          <ul class="projects-list">
+            <li>
+              <span class="project-title">Внедрение системы мониторинга Zabbix</span>
+              <div>Развернул и настроил мониторинг для 120 серверов и сетевых устройств, что позволило выявлять и устранять проблемы до их влияния на бизнес-процессы.</div>
+              <div class="project-links">
+                <a href="https://github.com/ivanivanov/zabbix-templates" target="_blank">GitHub</a>
+              </div>
+            </li>
+            <li>
+              <span class="project-title">Автоматизация резервного копирования (Veeam + PowerShell)</span>
+              <div>Разработал скрипты для автоматизации резервного копирования и тестирования восстановления данных, обеспечив 99.9% успешных восстановлений.</div>
+              <div class="project-links">
+                <a href="https://github.com/ivanivanov/veeam-backup" target="_blank">GitHub</a>
+              </div>
+            </li>
+            <li>
+              <span class="project-title">Инфраструктура для pet-проекта DevOps</span>
+              <div>Настроил CI/CD пайплайн для автоматического деплоя приложений в Docker-контейнерах с использованием GitHub Actions и Ansible.</div>
+              <div class="project-links">
+                <a href="https://github.com/ivanivanov/devops-pipeline" target="_blank">GitHub</a>
+                <a href="https://devops-demo.ivanivanov.dev" target="_blank">Demo</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Образование</h3>
+          <ul class="education-list">
+            <li>
+              <strong>Московский технический университет связи и информатики</strong><br>
+              Информационные системы и технологии, 2013 — 2017
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Сертификаты</h3>
+          <ul class="cert-list">
+            <li>Microsoft Certified: Azure Administrator Associate (2023)</li>
+            <li>VMware Certified Professional – Data Center Virtualization (2022)</li>
+            <li>Cisco CCNA (2021)</li>
+            <li>CompTIA Security+ (2020)</li>
+          </ul>
+        </section>
       </div>
-    </section>
-    <section class="languages">
-      <h3>Знание языков</h3>
-      <ul>
-        <li>Английский — выше среднего</li>
-        <li>Украинский — выше среднего</li>
-        <li>Азербайджанский — свободно</li>
-        <li>Турецкий — свободно</li>
-      </ul>
-    </section>
-  </main>
+      <aside>
+        <section>
+          <h3>Ключевые навыки</h3>
+          <ul class="skills-list">
+            <li>Windows Server <span class="skill-bar"><span style="width:95%"></span></span></li>
+            <li>Linux (Ubuntu, CentOS) <span class="skill-bar"><span style="width:85%"></span></span></li>
+            <li>VMware, Hyper-V <span class="skill-bar"><span style="width:90%"></span></span></li>
+            <li>TCP/IP, DNS, DHCP, VPN <span class="skill-bar"><span style="width:90%"></span></span></li>
+            <li>PowerShell, Bash, Ansible <span class="skill-bar"><span style="width:80%"></span></span></li>
+            <li>Veeam, Zabbix, Grafana <span class="skill-bar"><span style="width:85%"></span></span></li>
+            <li>Информационная безопасность <span class="skill-bar"><span style="width:80%"></span></span></li>
+            <li>DevOps, Docker, CI/CD <span class="skill-bar"><span style="width:75%"></span></span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Языки</h3>
+          <ul class="lang-list">
+            <li>Русский <span class="lang-level">родной</span></li>
+            <li>Английский <span class="lang-level">Upper-Intermediate (B2)</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Soft skills</h3>
+          <ul class="skills-list">
+            <li>Коммуникабельность</li>
+            <li>Аналитическое мышление</li>
+            <li>Работа в команде</li>
+            <li>Стрессоустойчивость</li>
+            <li>Обучаемость</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Контактная форма</h3>
+          <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+            <label>Имя:<input type="text" name="name" required></label>
+            <label>Email:<input type="email" name="email" required></label>
+            <label>Сообщение:<textarea name="message" rows="3" required></textarea></label>
+            <button type="submit">Отправить</button>
+          </form>
+        </section>
+      </aside>
+    </main>
+    <footer style="margin-top:32px; text-align:center; color:var(--muted); font-size:0.98em;">
+      &copy; 2025 Иван Иванов. Все права защищены.
+    </footer>
+  </div>
 </body>
 </html>
+
